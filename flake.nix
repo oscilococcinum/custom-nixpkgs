@@ -21,7 +21,8 @@
           cfmesh-cfdof-unstable = cfmesh-cfdof.override { version = "unstable"; };
 
           freecadrt-appimage = appimageTools.wrapType2 {
-            name = "freecadrt";
+            pname = "freecad";
+            version = "realthunder";
             src = inputs."freecadrt-appimage-${system}";
             #extraInstallCommands = ''
             #cd ..
@@ -29,7 +30,8 @@
             #'';
           };
           freecad-weekly-appimage = appimageTools.wrapType2 {
-            name = "freecad";
+            pname = "freecad";
+            version = "weekly";
             src = inputs."freecad-weekly-appimage-${system}";
             #extraInstallCommands = ''
             #cd ..
@@ -43,7 +45,7 @@
           openfoam = pkgs.callPackage (import ./openfoam-com) { };
 
           zen-beta-appimage = appimageTools.wrapType2 {
-            pname = "zen-beta";
+            pname = "zen";
             version = "beta";
             src = inputs."zen-beta-appimage-${system}";
             #extraInstallCommands = ''
@@ -52,7 +54,7 @@
             #'';
           };
           zen-twilight-appimage = appimageTools.wrapType2 {
-            pname = "zen-twilight";
+            pname = "zen";
             version = "twilight";
             src = inputs."zen-twilight-appimage-${system}";
             #extraInstallCommands = ''
